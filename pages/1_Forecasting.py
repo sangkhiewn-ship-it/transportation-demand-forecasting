@@ -394,3 +394,23 @@ st.subheader('กราฟค่าจริงและค่าพยากร
 st.caption('ช่วงข้อมูลย้อนหลังแสดง Actual และ fitted/one-step-ahead forecasts ของ Candidate Models; หลังข้อมูลจริงสิ้นสุดเป็น Future Forecast ของวิธีที่เลือก')
 st.line_chart(plot)
 st.download_button('⬇️ ดาวน์โหลดผลการพยากรณ์ (CSV)',disp.to_csv(index=False).encode('utf-8-sig'),'transportation_demand_forecast.csv','text/csv')
+
+
+st.markdown(
+    """
+    <div style="
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        font-size: 12px;
+        color: gray;
+        text-align: right;
+        z-index: 9999;
+    ">
+        Created by <b>Noppakun Sangkhiew</b>, Silpakorn University<br>
+        Forecasting calculations use Python statistical libraries, including <b>statsmodels</b>.<br>
+        <i>statsmodels: Seabold & Perktold (2010)</i>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
