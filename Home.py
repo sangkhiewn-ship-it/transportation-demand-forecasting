@@ -36,7 +36,6 @@ uploaded_file = st.file_uploader(
 )
 
 if uploaded_file is None:
-    if uploaded_file is None:
     st.info("กรุณาอัปโหลดไฟล์ข้อมูล CSV หรือ Excel เพื่อเริ่มต้นการวิเคราะห์")
 
     st.markdown(
@@ -58,7 +57,6 @@ if uploaded_file is None:
         unsafe_allow_html=True
     )
 
-    st.stop()
     st.stop()
 
 try:
