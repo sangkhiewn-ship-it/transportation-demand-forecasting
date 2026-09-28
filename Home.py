@@ -36,7 +36,29 @@ uploaded_file = st.file_uploader(
 )
 
 if uploaded_file is None:
+    if uploaded_file is None:
     st.info("กรุณาอัปโหลดไฟล์ข้อมูล CSV หรือ Excel เพื่อเริ่มต้นการวิเคราะห์")
+
+    st.markdown(
+        """
+        <div style="
+            position: fixed;
+            bottom: 10px;
+            right: 15px;
+            font-size: 12px;
+            color: gray;
+            text-align: right;
+            z-index: 9999;
+        ">
+            Created by <b>Noppakun Sangkhiew</b>, Silpakorn University<br>
+            Forecasting calculations use Python statistical libraries, including <b>statsmodels</b>.<br>
+            <i>statsmodels: Seabold & Perktold (2010)</i>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.stop()
     st.stop()
 
 try:
