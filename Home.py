@@ -271,6 +271,26 @@ st.write("Missing Demand: 0")
 st.write("ช่วงเวลาซ้ำ: 0")
 st.write("ช่วงเวลาที่ขาด: 0")
 
+
+st.markdown(
+    """
+    <div style="
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        font-size: 12px;
+        color: gray;
+        text-align: right;
+        z-index: 9999;
+    ">
+        Created by <b>Noppakun Sangkhiew</b>, Silpakorn University<br>
+        Forecasting calculations use Python statistical libraries, including <b>statsmodels</b>.<br>
+        <i>statsmodels: Seabold & Perktold (2010)</i>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.divider()
 if st.button("🔮 ทำการพยากรณ์ข้อมูล", type="primary", use_container_width=True):
     st.switch_page("pages/1_Forecasting.py")
